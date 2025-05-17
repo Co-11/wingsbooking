@@ -1,0 +1,523 @@
+/* divya */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #002244;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 30px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.user-menu {
+  position: absolute;
+  right: 30px;
+}
+
+.user-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.user-btn:hover {
+  background-color: #0056b3;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 150px;
+  top: 38px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #002244;
+  font-weight: 500;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.user-menu:hover .dropdown-content {
+  display: block;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background-color: #002244;
+    width: 100%;
+  }
+
+  .logo, .user-menu {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .user-menu {
+    align-self: flex-end;
+    margin-right: 30px;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+  }
+}
+
+
+/*----------------------banner---------------*/
+
+.banner {
+    text-align: center;
+    padding: 100px 20px;
+    /* background: url('img.jpg') no-repeat center center/cover;  */
+    color: white;
+}
+/* Banner image container */
+.ban-img {
+    position: relative;
+    width: 100%;
+    height: 400px;  /* Adjust the height as needed */
+    overflow: hidden;
+  }
+  
+  /* Overlay on top of the banner image */
+  .ban-img .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1;
+  }
+  
+  /* Banner image */
+  .ban-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures the image covers the entire container */
+  }
+  
+  /* Banner content */
+/* Banner content */
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2; /* Ensure it's above the overlay */
+    text-align: center;
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s;
+    z-index: 3; /* Make sure the button is above everything else */
+  }
+  
+  /* Button hover effect */
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Ensure the link inside the button appears as a button */
+  .btn-primary a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+  }
+  
+
+/* -----------------service-------------------- */
+
+.services {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 32px;
+    color: #002244;
+    margin-bottom: 40px;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service {
+    background: #f1f1f1;
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+.service i {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    font-size: 20px;
+    color: #002244;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* ----------------testimonial--------------- */
+
+.testimonials {
+    background: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 28px;
+    color: #002244;
+    margin-bottom: 40px;
+}
+
+.testimonial-icon {
+    font-size: 60px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.testimonial {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial p {
+    font-style: italic;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.testimonial h4 {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/*------------------- destination------------------ */
+
+.destinations {
+    background: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.destinations h2 {
+    font-size: 32px;
+    color: #002244;
+    margin-bottom: 40px;
+}
+
+.destination-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.destination {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.destination:hover {
+    transform: translateY(-5px);
+}
+
+.destination img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.destination h3 {
+    color: #002244;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.destination p {
+    font-size: 14px;
+    color: #555;
+}
+.destination-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .destination-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .destination-img-wrapper:hover img {
+    transform: scale(1.05);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .destination-img-wrapper:hover .overlay {
+    opacity: 1;
+  }
+  
+  .view-flights-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .view-flights-btn:hover {
+    background-color: #0056b3;
+  }
+  
+
+/* -----------------footer------------------- */
+
+.footer{
+    background:#002244;
+    padding:30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color: white;
+    font-size:0.8em;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color: white;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
+
+
+    /* Flight */
+
+    /* Initially hide the menu icon on large screens */
+    /* Hover effect for flight cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+      
+      .menu-icon {
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+      }
+      
+      .menu-icon:hover {
+        transform: scale(1.2); /* Slightly enlarge the icon */
+        transition: all 0.3s ease; /* Smooth transition */
+      }
+      
+      @media (max-width: 768px) {
+        .menu-icon {
+          display: block;
+        }
+      
+        nav ul {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background: #002244;
+          margin-top: 10px;
+          padding-left: 0;
+        }
+      
+        nav ul.show {
+          display: flex;
+        }
+      
+        nav ul li {
+          padding: 10px 20px;
+        }
+      }
+/* ------------------login -----------------*/
+.login1{
+   margin: auto;
+    border: none;
+    padding: 10px;
+}
+h1{
+    justify-content: center;
+    color: black;
+}
+
+/* ---------------------contact-----------------*/
+
+/* CONTACT FORM STYLING */
