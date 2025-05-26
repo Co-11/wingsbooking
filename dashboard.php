@@ -209,7 +209,7 @@ header nav {
             <td><?= htmlspecialchars($row['arrival_city']) ?></td>
             <td><?= htmlspecialchars($row['date']) ?></td>
             <td><?= htmlspecialchars($row['time']) ?></td>
-            <td>$<?= htmlspecialchars($row['price']) ?></td>
+            <td>₹<?= htmlspecialchars($row['price']) ?></td>
             <td><?= htmlspecialchars($row['seat']) ?></td>
           </tr>
         <?php endwhile; ?>
